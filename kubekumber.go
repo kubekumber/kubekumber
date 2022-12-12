@@ -51,7 +51,7 @@ func main() {
 
 		if regex == getCurrentConfig() {
 
-			clusters = []string{getCurrentConfig()}
+			clusters = []string{regex}
 
 		} else {
 

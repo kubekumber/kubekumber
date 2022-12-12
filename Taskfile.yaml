@@ -4,12 +4,12 @@ tasks:
     run: 
         desc: Run the app
         cmds:
-        - GOFLAGS=-mod=mod go run src/main.go
+        - GOFLAGS=-mod=mod go run main.go
 
     build:
         desc: Build the app
         cmds:
-        - GOFLAGS=-mod=mod go build -o bin/kubekumber src/main.go 
+        - GOFLAGS=-mod=mod go build -o bin/kubekumber main.go 
 
     clean:
         desc: Clean up the app

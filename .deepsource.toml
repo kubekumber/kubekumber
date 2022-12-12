@@ -5,4 +5,4 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_root = "github.com/MatanyaLoewenthal/kubekumber"
+  import_root = "github.com/kubekumber/kubekumber"

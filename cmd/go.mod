@@ -1,10 +1,10 @@
-module github.com/kubekumber/kubekumber
+module github.com/kubekumber/kubekumber/cmd
 
 go 1.19
 
 require (
 	github.com/bitfield/script v0.21.4
-	github.com/urfave/cli v1.22.10
+	github.com/urfave/cli/v2 v2.23.7
 )
 
 require (
@@ -13,6 +13,5 @@ require (
 	github.com/itchyny/gojq v0.12.7 // indirect
 	github.com/itchyny/timefmt-go v0.1.3 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
-	github.com/urfave/cli/v2 v2.23.7 // indirect
+	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 )

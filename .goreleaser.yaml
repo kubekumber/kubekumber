@@ -33,9 +33,9 @@ changelog:
 brews:
 - name: kubekumber
   # goarm: 6
-  homepage: https://github.com/MatanyaLoewenthal/homebrew-tools
+  homepage: https://github.com/kubekumber/homebrew-tools
   tap:
-    owner: MatanyaLoewenthal
+    owner: kubekumber
     name: homebrew-tools
     token: "{{ .Env.TAP_GITHUB_TOKEN }}"
 # modelines, feel free to remove those if you don't want/use them:

@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/bitfield/script"
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 func main() {
@@ -21,25 +21,29 @@ func main() {
 	app := cli.NewApp()
 
 	app.Flags = []cli.Flag{
-		cli.StringFlag{
-			Name:        "regex,r",
+		&cli.StringFlag{
+			Name:        "regex",
+			Aliases:     []string{"r"},
 			Value:       getCurrentConfig(),
 			Usage:       "regex for cluster selection",
 			Destination: &regex,
 		},
-		cli.StringFlag{
-			Name:        "command,c",
+		&cli.StringFlag{
+			Name:        "command",
+			Aliases:     []string{"c"},
 			Value:       "",
 			Usage:       "command to run on cluster",
 			Destination: &command,
 		},
-		cli.BoolFlag{
+		&cli.BoolFlag{
 			Name:        "verbose,v",
+			Aliases:     []string{"v"},
 			Usage:       "print cluster name and command before every output",
 			Destination: &verbose,
 		},
-		cli.BoolFlag{
+		&cli.BoolFlag{
 			Name:        "dry-run,d",
+			Aliases:     []string{"d"},
 			Usage:       "Print out clusters and command that would be run",
 			Destination: &dry_run,
 		},

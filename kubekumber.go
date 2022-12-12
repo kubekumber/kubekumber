@@ -22,7 +22,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:        "regex,r",
-			Value:       ".",
+			Value:       "current",
 			Usage:       "regex for cluster selection",
 			Destination: &regex,
 		},
@@ -40,12 +40,11 @@ func main() {
 	}
 
 	app.Action = func(c *cli.Context) error {
-		regex := regexp.MustCompile(regex)
+		regex_compiled := regexp.MustCompile(regex)
 
-		clusters_rune, _ := script.Exec("kubectx").MatchRegexp(regex).String()
+		clusters_rune, _ := script.Exec("kubectx").MatchRegexp(regex_compiled).String()
 
 		clusters := strings.Split(strings.TrimSpace(clusters_rune), "\n")
-		fmt.Println(clusters)
 
 		for _, cluster := range clusters {
 
@@ -55,7 +54,13 @@ func main() {
 
 			}
 
-			script.Exec("kubectl " + command + " --context " + cluster).Stdout()
+			if regex == "current" {
+				script.Exec("kubectl " + command).Stdout()
+
+			} else {
+				script.Exec("kubectl " + command + " --context " + cluster).Stdout()
+			}
+
 		}
 
 		return nil

@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"regexp"
 	"strings"
@@ -12,7 +11,7 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-func Execute(version string) {
+func Execute(version string) error {
 
 	var command string
 	var regex string
@@ -100,9 +99,10 @@ func Execute(version string) {
 		return nil
 	}
 
-	if err := app.Run(os.Args); err != nil {
-		log.Fatal(err)
-	}
+	// if err := app.Run(os.Args); err != nil {
+	// 	return err
+	// }
+	return app.Run(os.Args)
 }
 
 func getCurrentConfig() string {

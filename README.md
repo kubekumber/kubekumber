@@ -43,7 +43,7 @@ Or, do it in one line:
 ## TODO
 - [x] Homebrew
 - [ ] Testing
-- [ ] Versioning & Author in CLI
+- [x] Versioning & Author in CLI
 - [ ] Moar CI/CD
 - [ ] Documentation
 - [ ] Website?

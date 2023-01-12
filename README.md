@@ -6,7 +6,7 @@
 Introducing Kubekumber, a good tool for a bad practice. The bad practice being manually having to run a `kubectl` command against hundreds of kube clusters that you or your company manage because some Executive said ["We need to cloud native our containerization strategy"](https://www.reddit.com/r/kubernetes/comments/dtsg4z/dilbert_on_kubernetes/). Behold, Kubekumber!
 ## Badges
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/kubekumber/kubekumber)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kubekumber/kubekumber/goreleaser)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kubekumber/kubekumber/goreleaser.yaml)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/kubekumber/kubekumber)
 
 

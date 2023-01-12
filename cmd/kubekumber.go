@@ -99,9 +99,6 @@ func Execute(version string) error {
 		return nil
 	}
 
-	// if err := app.Run(os.Args); err != nil {
-	// 	return err
-	// }
 	return app.Run(os.Args)
 }
 
